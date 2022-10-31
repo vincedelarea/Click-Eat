@@ -1,27 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+.inter-weight-300{
+    font-family: 'Inter';
+    font-weight: 300;
+}
+
+
 html{
     margin: 0;
     padding: 0;
     /* overflow: hidden; */
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
 }
 
 body{
     height: 100%;
+    background-color: #f8f8ff;
+    font-family: inherit;
+    background-image: url('img/fast-foods.jpg');
+    background-color: rgba(255,255,255,0.3);
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
 }
 
-.login_section{
+.login_section, .signup_section{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.navbar{
+    box-shadow: 0px 0px 10px -1px rgba(102, 102, 102, 0.493);
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(102, 102, 102, 0.527);
+    -moz-box-shadow: 0px 0px 10px -1px rgba(102, 102, 102, 0.527);
+}
+
+.input-group-text{
+    background-color: transparent;
+}
 
 #login_container{
     width: 60vh;
     height: auto;
+    background-color: #fff;
     padding: 2em 3em;
     border-radius: 1em;
     box-shadow: 0px 0px 10px -1px rgba(102, 102, 102, 0.493);
@@ -29,7 +56,141 @@ body{
     -moz-box-shadow: 0px 0px 10px -1px rgba(102, 102, 102, 0.527);
 }
 
+#login_container h1,h2,h3,h4{
+    font-family: 'Inter', sans-serif;
+}
+
 .logo_section{
     display: flex;
     justify-content: center;
+}
+
+#wave{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+}
+
+.form-header{
+    font-weight: 600;
+    color: #19110C;
+}
+
+.form-sub-header{
+    color: #3b444b;
+}
+
+.btn-primary{
+    background-color: #FF6300;
+    border-color: #FF6300;
+}
+
+.btn-primary:hover{
+    background-color: #ff7e2d;
+    color: #19110C;
+    border-color: #ff7e2d;
+}
+
+#signup_container{
+    width: 80vh;
+    height: auto;
+    background-color: #fff;
+    padding: 2em 6em 3em 6em;
+    border-radius: 1em;
+    box-shadow: 0px 0px 10px -1px rgba(102, 102, 102, 0.493);
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(102, 102, 102, 0.527);
+    -moz-box-shadow: 0px 0px 10px -1px rgba(102, 102, 102, 0.527);
+}
+
+/* ------------------- MEDIA QUERIES ------------------ */
+
+
+/* @media screen and (min-width: 768px) {
+    #login_container{
+        width: 60vh;
+        padding: 1em 2em;
+        margin-top: 5em;
+    }
+
+    #logo_img{
+        width: 150px;
+    }
+} */
+
+@media screen and (min-width: 360px) {
+    #login_container{
+        width: 60vh;
+        padding: 1em 2em;
+        margin-top: 5em;
+    }
+
+    #logo_img{
+        width: 150px;
+    }
+
+    #signup_container{
+        width: 60vh;
+        padding: 1em 2em;
+        margin-top: 4em;
+    }
+
+    
+}
+
+@media screen and (min-width: 400px) {
+    #login_container{
+        width: 60vh;
+        padding: 1em 2em;
+        margin-top: 7em;
+    }
+
+    #logo_img{
+        width: 150px;
+    }
+
+    #signup_container{
+        width: 60vh;
+        padding: 1em 2em;
+        margin-top: 6em;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #login_container{
+        width: 60vh;
+        padding: 2em 3em;
+        margin-top: 4em;
+    }
+
+    #logo_img{
+        width: 150px;
+    }
+
+    #signup_container{
+        width: 80vh;
+        padding: 2em 4em;
+        margin-top: 2em;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #login_container{
+        width: 60vh;
+        padding: 4em 8em;
+        margin-top: 10em;
+    }
+
+    #logo_img{
+        width: 250px;
+    }
+
+    #signup_container{
+        width: 70vh;
+        padding: 4em 8em;
+        margin-top: 9em;
+    }
+
+    .click_eat_logo{
+        height: 2em;
+    }
 }
