@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="main.js"></script>
     <link rel="icon" href="img/clickeat logo.png">
-    <title>Document</title>
+    <title>ClickEats!</title>
 </head>
 <body>
   <nav class="autohide navbar navbar-expand-lg navbar-light bg-light">
@@ -51,7 +51,7 @@
     </nav>
     <div class="container">
         <section class="signup_section">
-            <form action="" method="post" class="col col-md-4 col-sm-2" id="signup_container">
+            <form action="signup_user.php" method="post" class="col col-md-4 col-sm-2" id="signup_container" onsubmit="return formValidateSignup()">
                 <fieldset>
 
                     <div class=" mt-3 mb-4 text-center">
@@ -61,27 +61,27 @@
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
-                        <input type="text" class="form-control" name="name" placeholder="Full name" aria-label="Full name" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="singup_fname" name="fname" placeholder="Full name" aria-label="Full name" aria-describedby="basic-addon1">
                     </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
-                        <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="signup_email" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
                     </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
-                        <input type="password" class="form-control" name="pass" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" id="signup_pass" name="pass" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
                     </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user-lock"></i></span>
-                        <input type="password" class="form-control" name="cpass" placeholder="Conifrm password" aria-label="Confirm password" aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" id="signup_cpass" name="cpass" placeholder="Conifrm password" aria-label="Confirm password" aria-describedby="basic-addon1">
                     </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></i></span>
-                        <input type="text" class="form-control" name="phone" placeholder="Phone number" aria-label="Phone number" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="signup_phone" name="phone" placeholder="Phone number" aria-label="Phone number" aria-describedby="basic-addon1">
                     </div>
             
                     <div class="mt-4 mb-2 d-grid gap-2 col-6 mx-auto">

@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="main.js"></script>
     <link rel="icon" href="img/clickeat logo.png">
-    <title>Document</title>
+    <title>ClickEats!</title>
 </head>
 <body>
   <nav class="autohide navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="./img/clickeat logo hz png.png" alt="startup_logo" height="46"></a>
+        <a class="navbar-brand" href="#"><img src="./img/clickeat logo hz png.png" alt="startup_logo" height="36"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,7 +50,7 @@
     </nav>
     <div class="container">
         <section class="login_section">
-            <form action="" method="post" class="col col-md-4 col-sm-2" id="login_container">
+            <form action="validate_login.php" method="post" onsubmit="return formValidateLogin()" class="col col-md-4 col-sm-2" id="login_container">
                 <fieldset>
                     <!-- <div class="logo_section mb-2">
                         <img src="./img/clickeat logo png.png" alt="logo" id="logo_img">
@@ -72,6 +72,18 @@
                             <label for="pass" class="form-label">Password</label>
                         </div>
                     </div>
+                    
+                    <?php
+                      include('validate_login.php');
+                      if($count == 0 && $empty == false){
+                        echo "
+                          <div class='alert alert-danger' role='alert'>
+                            <label id='error_label'>Wrong email or password entered</label>
+                          </div>
+                        ";
+                      }
+                    ?>
+
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" unchecked>
                       <label class="form-check-label">Remember Me</label>

@@ -24,7 +24,7 @@ body{
     background-blend-mode: lighten;
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
+    background-attachment: fixed;
 }
 
 .login_section, .signup_section{
@@ -71,6 +71,11 @@ body{
     bottom: 0;
 }
 
+/* .small_label{
+    font-size: 0.1em;
+    font-weight: 900;
+} */
+
 .form-header{
     font-weight: 600;
     color: #19110C;
@@ -85,7 +90,7 @@ body{
     border-color: #FF6300;
 }
 
-.btn-primary:hover{
+.btn-primary:hover, .btn-primary:active{
     background-color: #ff7e2d;
     color: #19110C;
     border-color: #ff7e2d;
@@ -134,7 +139,6 @@ body{
         margin-top: 4em;
     }
 
-    
 }
 
 @media screen and (min-width: 400px) {
