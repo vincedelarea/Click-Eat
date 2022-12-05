@@ -21,7 +21,6 @@
 
         if($count == 1){
             echo "<script>alert('Login Successful')</script>
-                <a href='login.php'>Go back to login</a>
             ";
         }
     }

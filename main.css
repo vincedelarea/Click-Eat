@@ -96,6 +96,10 @@ body{
     border-color: #ff7e2d;
 }
 
+.error_msg{
+    font-size: 1em;
+}
+
 #signup_container{
     width: 80vh;
     height: auto;
