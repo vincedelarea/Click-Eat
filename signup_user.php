@@ -1,7 +1,9 @@
 <?php
     require("connection.php");
     try{
-        $full_name = $_POST['fname'];
+        $first_name = $_POST['fname'];
+        $middle_name = $_POST['mname'];
+        $last_name = $_POST['lname'];
         $email = $_POST['email'];
         $password = $_POST['pass'];
         $password = sha1($password);
@@ -9,7 +11,7 @@
     } catch(Exeption $e){
     }
 
-    $query = "insert into user_acc (full_name, email, password, number) values('$full_name', '$email', '$password', '$phone_number')";
+    $query = "insert into user_acc (first_name, middle_name, last_name, email, password, number) values('$first_name','$middle_name', '$last_name', '$email', '$password', '$phone_number')";
     
     if($con->query($query) === TRUE){
         echo "<script>alert('Sign up Successful')</script>
