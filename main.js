@@ -71,11 +71,11 @@ function IsEmail(email){
 }
 
 function formValidateSignup(){
-    let email = $('#email_err').val();
-    let fname = $('#fname_err').val();
-    let pass = $('#pass_err').val();
-    let cpass = $('#cpass_err').val();
-    let phone = $('#phone_err').val();
+    let email = $('#email_err').text();
+    let fname = $('#fname_err').text();
+    let pass = $('#pass_err').text();
+    let cpass = $('#cpass_err').text();
+    let phone = $('#phone_err').text();
 
     let valid_counter = 0;
 
@@ -92,8 +92,9 @@ function formValidateSignup(){
         valid_counter +=1;
     }
     if(valid_counter==4){
-        alert("success");
         return true;
+    }else{
+        return false;
     }
     return false;
 }

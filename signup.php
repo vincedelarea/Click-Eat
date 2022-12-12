@@ -12,7 +12,7 @@
     <title>ClickEats!</title>
 </head>
 <body>
-  <nav class="autohide navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="autohide navbar navbar-expand-lg navbar-light bg-light d-block">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="./img/clickeat logo hz png.png" alt="startup_logo" height="36"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,34 +48,38 @@
       </div> -->
     </div>
   </nav>
+  <div id="main_section">
 
-  <div class="container h-100">
-    <section class="signup_section" class="p-5">
-    
+    <div class="d-flex aligns-items-center justify-content-center">
+      
       <form action="signup_user.php" method="post" onsubmit="return formValidateSignup()" >
+
         <fieldset class="row" id="signup_container">
-          <div class="col col-md-4 col-lg-4 p-5">  
+
+          <div class="col col-sm-8 col-md-4 col-lg-4 py-5" id="hero_section">  
             <div class="mt-3 mb-4 text-center">
-              <h2 class="text-left form-header">Welcome to <img class="click_eat_logo" src="./img/clickeat logo hz png.png" height="46" alt=""></h2>
-              <h6 class="form-sub-header">Create an account</h6>
+              <h2 class="text-left form-header">Welcome to</h2>
+              <img class="click_eat_logo img-fluid" src="./img/clickeat-logo-png.png"  alt="">
+              <h3 class="form-sub-header white-font">Create an account</h3>
             </div>
           </div>
 
-          <div class="col col-md-4 col-sm-2 col-lg-8 mb-4 p-5">
+          <div class="col col-sm-8 col-md-4 col-lg-8 px-5 py-4">
+            <h3 class="mb-4">Personal Information</h3>
             <div class="row">
-              <div class="col-lg-4 col-sm-12 mb-3">
+              <div class="col-lg-4 col-sm-12">
                 <div class="form-floating">
                   <input type="text" class="form-control rounded-end" id="singup_fname" name="fname" placeholder="Full name" aria-label="Full name" aria-describedby="basic-addon1" required>
                   <label for="singup_fname" class="form-label">First Name</label>
                 </div>
               </div>
-              <div class="col-lg-4 col-sm-12 mb-3">
+              <div class="col-lg-4 col-sm-12">
                 <div class="form-floating">
                   <input type="text" class="form-control rounded-end" id="singup_fname" name="mname" placeholder="Full name" aria-label="Full name" aria-describedby="basic-addon1" required>
                   <label for="singup_fname" class="form-label">Middle Name</label>
                 </div>
               </div>
-              <div class="col-lg-4 col-sm-12 mb-3">
+              <div class="col-lg-4 col-sm-12">
                 <div class="form-floating">
                   <input type="text" class="form-control rounded-end" id="singup_fname" name="lname" placeholder="Full name" aria-label="Full name" aria-describedby="basic-addon1" required>
                   <label for="singup_fname" class="form-label">Last Name</label>
@@ -131,13 +135,17 @@
               <span class="error_msg text-danger" id="phone_err"></span>
             </div>
             
-            <div class="mt-4 d-grid gap-2 col-6 mx-auto">
-                <button type="submit" class="btn btn-primary">Sign up</button>
+            <div class="mt-4 d-grid gap-2 col-sm-12 col-md-6 mx-auto">
+                <button type="submit" class="btn btn-primary btn-lg">Sign up</button>
             </div>
           </div>
+
         </fieldset>
+
       </form>
-    </section>
+
+    </div>
+
   </div>
 
   <footer class="text-center text-lg-start bg-white text-muted">

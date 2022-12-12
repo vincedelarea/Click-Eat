@@ -88,7 +88,7 @@
                       <label class="form-check-label">Remember Me</label>
                     </div>
                     <div class="mt-4">
-                        <button type="submit" class="btn btn-primary btn-md col col-12">Log In</button>
+                        <button type="submit" class="btn btn-primary btn-lg col col-12">Log In</button>
                     </div>
                     <div class="mt-3">
                       <p class=".inter-weight-300">Create an account <a href="signup.php" class="link-primary">here</a></p>
