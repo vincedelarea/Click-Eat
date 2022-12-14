@@ -128,8 +128,7 @@
             </h6>
             <img src="./img/Adonis.png" alt="team logo" id="team_logo">
             <p class="mt-3">
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
+              We offer Game Development, Software Development, Graphic Design, Web Development, SEO, DevOps, Social Media Marketing services for MSMEs and Professionals.
             </p>
           </div>
 
