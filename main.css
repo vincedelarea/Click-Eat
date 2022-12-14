@@ -3,6 +3,8 @@
     --orange: #FF6300;
     --ghost-white: #FAFAFA;
     --yellow: #FFFF00;
+    --blue-highlight: #026af3;
+    --grey: rgb(73, 73, 73);
 }
 .inter-weight-300{
     font-family: 'Inter';
@@ -31,13 +33,9 @@ body{
     background-attachment: fixed;
 }
 
-.white-font{
-    color: #FFFFFF;
-}
-
-.login_section{
+#login_section{
     width: 100%;
-    height: auto;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +55,6 @@ body{
     width: 60vh;
     height: auto;
     background-color: var(--ghost-white);
-    padding: 2em 3em;
     border-radius: 1em;
     box-shadow: 0px 0px 10px -1px rgba(102, 102, 102, 0.493);
     -webkit-box-shadow: 0px 0px 10px -1px rgba(102, 102, 102, 0.527);
@@ -77,25 +74,31 @@ body{
     
 }
 
+.text-blue{
+    color: var(--blue-highlight);
+}
+
+.text-grey{
+    color: var(--grey);
+}
+
+.text-orange{
+    color: var(--orange);
+}
+
 #wave{
     position: absolute;
     z-index: -1;
     bottom: 0;
 }
 
-/* .small_label{
-    font-size: 0.1em;
-    font-weight: 900;
-} */
-
 .form-header{
     font-weight: 600;
-    color: #19110C;
-    text-shadow: 0px 0px 5px #FFFFFF;
+    /* text-shadow: 0px 0px 5px #FFFFFF; */
 }
 
 .form-sub-header{
-    text-shadow: var(--orange) 0px 0px 4px;
+    /* text-shadow: var(--orange) 0px 0px 4px; */
 }
 
 .btn-primary{
@@ -104,8 +107,8 @@ body{
 }
 
 .btn-primary:hover, .btn-primary:active{
-    background-color: #ff7e2d;
-    color: #19110C;
+    background-color: var(--blue-highlight);
+    color: var(--ghost-white);
     border-color: #ff7e2d;
 }
 
@@ -129,10 +132,20 @@ body{
 }
 
 #hero_section{
-    background-image: url("./img/food-pic2.jpg");
+    background-color: var(--orange);
+    color: var(--ghost-white);
+    overflow: hidden;
+}
+
+.hero-section-head{
+    background-image: url("./img/delivery-rider-2-recolored.jpg");
     background-size: cover;
     background-position: center bottom;
-    border-radius: 1em 0 0 1em;
+    background-attachment: center bottom;
+    background-color: var(--ghost-white);
+    -webkit-clip-path: polygon(50% 0%, 100% 16%, 100% 75%, 50% 100%, 0% 75%, 0 16%);
+    clip-path: polygon(50% 0%, 100% 16%, 100% 75%, 50% 100%, 0% 75%, 0 16%);
+    height: 100%;
 }
 
 #main_section{
@@ -144,6 +157,20 @@ body{
     height: 100%;
 }
 
+#team_logo{
+    width: 200px;
+    height: auto;
+}
+
+#display-text{
+    background-color: red;
+    color: #FFFF00;
+}
+
+.footer-body{
+    background-color: #FAFAFA;
+    color: var(--orange));
+}
 /* ------------------- MEDIA QUERIES ------------------ */
 
 
@@ -162,8 +189,6 @@ body{
 @media screen and (min-width: 360px) {
     #login_container{
         width: 60vh;
-        padding: 1em 2em;
-        margin-top: 5em;
     }
 
     #logo_img{
@@ -191,8 +216,6 @@ body{
 @media screen and (min-width: 400px) {
     #login_container{
         width: 60vh;
-        padding: 1em 2em;
-        margin-top: 7em;
     }
 
     #logo_img{
@@ -218,9 +241,7 @@ body{
 
 @media screen and (min-width: 1280px) {
     #login_container{
-        width: 60vh;
-        padding: 2em 3em;
-        margin-top: 4em;
+        width: 70vh;
     }
 
     #logo_img{
@@ -246,8 +267,6 @@ body{
 @media screen and (min-width: 1920px) {
     #login_container{
         width: 60vh;
-        padding: 4em 8em;
-        margin-top: 10em;
     }
 
     #logo_img{
@@ -261,7 +280,7 @@ body{
     } */
 
     .click_eat_logo{
-        height: 2em;
+        size: 4em;
     }
 
     #main_section{
@@ -269,7 +288,7 @@ body{
     }
 
     #signup_container{
-        width: 80vw;
+        width: 70vw;
         flex-direction: row;
     }
 

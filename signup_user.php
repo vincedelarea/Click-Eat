@@ -14,8 +14,6 @@
     $query = "insert into user_acc (first_name, middle_name, last_name, email, password, number) values('$first_name','$middle_name', '$last_name', '$email', '$password', '$phone_number')";
     
     if($con->query($query) === TRUE){
-        echo "<script>alert('Sign up Successful')</script>
-                <a href='login.php'>Go to login</a>
-            ";
+        header('Location: login.php');
     }
 ?>

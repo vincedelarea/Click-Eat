@@ -70,6 +70,35 @@ function IsEmail(email){
     }
 }
 
+async function CheckEmailExists(){
+    let flag = true
+    var email = $("#signup_email").val();
+    $.ajax({
+        url: 'validate_signup.php',
+        type: 'post',
+        data: {
+            'email_check': 1,
+            'email': email,
+        },
+        success: function(response){
+            if(IsEmail(email) == true){
+                if(response.trim() == 'taken'){
+                    alert(response);
+                    flag = true;
+                    return flag;
+                }else if(response.trim() == 'not_taken'){
+                    alert(response);
+                    flag = false;
+                    return flag;
+                }
+            }else{
+                
+            }
+        }
+        
+    });
+}
+
 function formValidateSignup(){
     let email = $('#email_err').text();
     let fname = $('#fname_err').text();
@@ -78,6 +107,7 @@ function formValidateSignup(){
     let phone = $('#phone_err').text();
 
     let valid_counter = 0;
+
 
     if(email == ''){
         valid_counter += 1;
@@ -92,6 +122,7 @@ function formValidateSignup(){
         valid_counter +=1;
     }
     if(valid_counter==4){
+        alert("Signup Successful.")
         return true;
     }else{
         return false;
